@@ -5,10 +5,11 @@
 
 <!-- 사용자 CSS 추가 -->
 <th:block layout:fragment="css">
-  <style>
+    <style>
         .error {
             color: #bd2130;
         }
+
 
     </style>
 </th:block>
@@ -16,30 +17,27 @@
 <body>
 <div layout:fragment="content">
 
-  <form role="form" method="post">
-    <div class="form-group">
-      <label th:for="title">제목</label>
-      <input type="title" name="title" class="form-control" placeholder="제목을 입력해주세요">
-    </div>
-<!--    <div class="form-group">-->
-<!--      <label th:for="author">작성자</label>-->
-<!--      <td th:text="${memberFormDto.name}"></td>-->
-<!--    </div>-->
-    <div>
-      이름 : <span th:text="${memberFormDto.name}"></span>
-    </div>
+    <form role="form" method="post">
+        <div class="form-group">
+            <label th:for="title">제목</label>
+            <input type="title" name="title" class="form-control" placeholder="제목을 입력해주세요">
+        </div>
+        <div class="form-group">
+            <label th:for="author">작성자</label>
+            <td th:text="${memberFormDto.name}"></td>
+        </div>
 
-    <div class="form-group">
-      <label th:for="content">내용</label>
-      <input type="text" name="content" id="content" class="form-control" placeholder="내용을 입력하세요">
+        <div class="form-group">
+            <label th:for="content">내용</label>
+            <input type="text" name="content" id="content" class="form-control" placeholder="내용을 입력하세요">
+        </div>
+    </form>
+<!--    <a href="/" role="button" class="btn btn-secondary">취소</a>-->
+    <div>
+        <button th:formaction="@{/posts/save}" type="submit" class="btn btn-primary">저장</button>
     </div>
-  </form>
-  <a href="/" role="button" class="btn btn-secondary">취소</a>
-  <div style="text-align: center">
-    <button type="submit" class="btn btn-primary" style="">Submit</button>
-  </div>
 
 </div>
 </body>
-n
 </html>
+

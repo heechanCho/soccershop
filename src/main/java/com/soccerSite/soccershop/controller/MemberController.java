@@ -67,19 +67,7 @@ public class MemberController {
         return "/member/memberLoginForm";
     }
 
-    @GetMapping(value = "/posts/save")
-    public String getName(Model model, Principal principal) {
-        MemberFormDto memberFormDto = new MemberFormDto();
-        Member member = memberService.findMemberByEmail(principal.getName());
 
-
-        memberFormDto.setName(member.getName());
-
-        model.addAttribute("memberFormDto", memberFormDto);
-
-        System.out.println("=====================>" + member.getName());
-        return "/posts-save";
-    }
 
 
 }

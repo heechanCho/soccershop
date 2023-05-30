@@ -29,6 +29,11 @@ public class BoardController {
         return "question_list";
     }
 
+//    public String contentForm(Model model) {
+//        model.addAttribute("BoardDto", new BoardDto());
+//        return
+//    }
+
 //    @PostMapping(value = "/posts/save")
 //    public String boardForm(BoardDto boardDto) {
 //

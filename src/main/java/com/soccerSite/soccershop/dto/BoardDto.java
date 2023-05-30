@@ -11,12 +11,12 @@ import java.time.LocalDateTime;
 @Setter
 public class BoardDto {
 
-    private Integer id;
+    private Long id;
 
-    @NotBlank(message = "제목을 입력해주세요")
+    @NotBlank(message = "제목은 필수 입력 값입니다.")
     private String subject;
 
-    @NotBlank(message = "내용을 입력해주세요")
+    @NotBlank(message = "가격은 필수 입력 값입니다.")
     private String content;
 
     private LocalDateTime createDate;
